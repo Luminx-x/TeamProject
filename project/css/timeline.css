@@ -1,0 +1,118 @@
+body {
+  background-color: #6C464F;
+}
+
+h1 {
+  text-align: center;
+  border-style: solid;
+  padding: 15px;
+  background-color: #9FA4C4;
+}
+
+#originalCanvas {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 485px;
+  height: 430.33px;
+  float: left;
+}
+
+#back {
+  position: relative;
+  right: 0;
+  width: 100px;
+  height: 40px;
+  background-color: #9FA4C4;
+}
+
+
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#canvas2 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+  margin-left: 10px;
+}
+
+#canvas3 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+}
+
+#canvas4 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+}
+
+#canvas5 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+  margin-left: 10px;
+}
+
+#canvas6 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+}
+
+#canvas7 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+}
+
+#canvas8 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+  margin-left: 10px;
+}
+
+#canvas9 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+}
+
+#canvas10 {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 295px;
+  height: 200px;
+  float: left;
+}

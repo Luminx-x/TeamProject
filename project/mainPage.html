@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+</html>
+<html>
+<head>
+    <title>Remix a Canvas</title>
+  	<script src="js/mainPage.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/mainPage.css">
+</head>
+<body>
+    <h1>
+      Remix a Canvas!
+    </h1>
+    <!-- <section class="container"> -->
+    <div class="drawing-board">
+      <canvas id="drawing-board">
+      </canvas>
+    </div>
+    <div id="previous">
+      Prev
+    </div>
+    <br>
+    <div id="toolbar">
+      <h2>
+        Tools!
+      </h2>
+      <label for="stroke">
+        Colors
+      </label>
+      <input id="stroke" name='stroke' type="color">
+      <br>
+      <label for="lineWidth">
+        Line Width
+      </label>
+      <input id="lineWidth" name="lineWidth" type="number" value="5">
+      <br>
+      <button id="clear">
+        Clear
+      </button>
+    </div>
+    <div class="center hideform">
+        <button id="closePopUp">
+          X
+        </button>
+        <form action="/action_page.php">
+            Title of Artwork:
+            <br>
+            <input type="text">
+            <br>
+            <br>
+            Your Name:
+            <br>
+            <input type="text">
+            <br>
+            <br>
+            <input type="button" onclick="window.location.href = 'timeline.html';" value="Submit!">
+        </form>
+    </div>
+    <button id="showPopUp">
+      Finish!
+    </button>
+</body>
+</html>

@@ -1,0 +1,66 @@
+body {
+  background-color: #6C464F;
+}
+
+h1 {
+  text-align: center;
+  border-style: solid;
+  padding: 15px;
+  background-color: #9FA4C4;
+}
+
+canvas {
+  position: absolute;
+  border: 3px solid black;
+  background-color: white;
+  width: 1200px;
+  height: 646px;
+  left: 20.1%;
+}
+
+#toolbar {
+  background-color: #9FA4C4;
+  border: 3px solid black;
+  padding: 10px;
+  width: 260px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+#previous {
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+  width: 260px;
+  height: 200px;
+}
+
+#showPopUp {
+  position: relative;
+  left: 93.3%;
+  width: 100px;
+  height: 40px;
+  background-color: #9FA4C4;
+}
+
+#closePopUp {
+  position: relative; left: 215px; top: 1px;
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 30%;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+  text-align: center;
+  background-color: #9FA4C4;
+}
+
+.hideform {
+  display: none;
+}
