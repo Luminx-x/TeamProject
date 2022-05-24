@@ -14,35 +14,39 @@
     <h1>
       Remix a Canvas!
     </h1>
-    <!-- <section class="container"> -->
-    <div class="drawing-board">
-      <canvas id="drawing-board">
-      </canvas>
-    </div>
-    <div id="previous">
-      Prev
-    </div>
-    <br>
-    <div id="toolbar">
-      <h2>
-        Tools!
-      </h2>
-      <label for="stroke">
-        Colors
-      </label>
-      <input id="stroke" name='stroke' type="color">
+    <section class="container" id="blur">
+      <div class="drawing-board">
+        <canvas id="drawing-board">
+        </canvas>
+      </div>
+      <div id="previous">
+        Prev
+      </div>
       <br>
-      <label for="lineWidth">
-        Line Width
-      </label>
-      <input id="lineWidth" name="lineWidth" type="number" value="5">
-      <br>
-      <button id="clear">
-        Clear
-      </button>
-    </div>
+      <div id="toolbar">
+        <h2>
+          Tools!
+        </h2>
+        <label for="stroke">
+          Colors
+        </label>
+        <input id="stroke" name='stroke' type="color">
+        <br>
+        <label for="lineWidth">
+          Line Width
+        </label>
+        <input id="lineWidth" name="lineWidth" type="number" value="5">
+        <br>
+        <!-- <button id="eraser" onclick="eraser()">
+          Eraser
+        </button> -->
+        <button id="clear">
+          Clear
+        </button>
+      </div>
+    </section>
     <div class="center hideform">
-        <button id="closePopUp">
+        <button id="closePopUp" onclick="toggle()">
           X
         </button>
         <form action="/action_page.php">
@@ -59,7 +63,8 @@
             <input type="button" onclick="window.location.href = 'timeline.html';" value="Submit!">
         </form>
     </div>
-    <button id="showPopUp">
+    <br>
+    <button id="showPopUp" onclick="toggle()">
       Finish!
     </button>
 </body>
