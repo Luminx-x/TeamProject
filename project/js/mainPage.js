@@ -18,6 +18,7 @@ $(function() {
     //Setting initial values
     context.strokeStyle = stroke.value;
     lineWidth = lineWidth.value;
+    ctx.lineCap = 'round';
 
     var canvasOffset = $('#drawing-board').offset();
 
@@ -36,6 +37,11 @@ $(function() {
           }
     });
 
+    toolbar.addEventListener('click', e => {
+        if(e.target.id === 'fill') {
+
+          }
+    });
 
 
     //Color Tool
@@ -44,6 +50,7 @@ $(function() {
             ctx.strokeStyle = e.target.value;
         }
     });
+
 
     //Line Width Tool
     toolbar.addEventListener('change', e => {
@@ -55,28 +62,32 @@ $(function() {
     //Clear Tools
     toolbar.addEventListener('click', e => {
         if (e.target.id === 'clear') {
-            /*
-            var image = new Image();
-            image.src = "img/myimg.jpg";
-            console.log(image);
-            ctx.drawImage(image, 0, 0, 500, 200);
-            cPush();
-            */
             ctx.clearRect(0, 0, theCanvas.width, theCanvas.height);
             cPush();
         }
+
+        //pen cap shape (probably not needed)
+        if(e.target.id === 'butt') {
+            ctx.lineCap = 'butt';
+        }
+        if(e.target.id === 'square') {
+            ctx.lineCap = 'square';
+        }
+        if(e.target.id === 'round') {
+            ctx.lineCap = 'round';
+        }
     });
 
-    //Undo
+    //Save to stack
     function cPush() {
       cStep++;
       console.log(cStep);
       if (cStep < cPushArray.length) { cPushArray.length = cStep; }
       cPushArray.push(theCanvas.toDataURL());
-      console.log(cPushArray[cStep]);
     }
     cPush();
 
+    //Undo
     toolbar.addEventListener('click', e => {
         if (e.target.id === 'undo') {
           if (cStep > 0) {
@@ -84,7 +95,8 @@ $(function() {
               console.log(cStep);
               var canvasPic = new Image();
               canvasPic.src = cPushArray[cStep];
-              //ctx.drawImage(canvasPic, 0, 0)
+
+              //load last stack image
               canvasPic.onload = function () { ctx.drawImage(canvasPic, 0, 0); }
               ctx.clearRect(0, 0, theCanvas.width, theCanvas.height);
           }
@@ -99,7 +111,7 @@ $(function() {
               console.log(cStep);
               var canvasPic = new Image();
               canvasPic.src = cPushArray[cStep];
-              //ctx.drawImage(canvasPic, 0, 0)
+              //load stack image + 1
               canvasPic.onload = function () { ctx.drawImage(canvasPic, 0, 0); }
           }
         }
@@ -119,7 +131,7 @@ $(function() {
     $('#drawing-board').mousedown(function(e) {
         letsdraw = true;
         ctx.lineWidth = lineWidth;
-        ctx.lineCap = 'round';
+        //ctx.lineCap = 'round';
         ctx.beginPath();
         ctx.moveTo(e.pageX - canvasOffset.left, e.pageY - canvasOffset.top);
         cPush();
