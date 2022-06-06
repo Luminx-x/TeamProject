@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/site.css">
     <link rel="stylesheet" type="text/css" href="css/mainPage.css">
 </head>
@@ -21,28 +22,20 @@
       </div>
       <div id="previous">
         Prev
+        <img src="img/smile.png">
       </div>
       <br>
       <div id="toolbar">
-
         <h2>
           Tools!
         </h2>
-
-        <button id="pencil">
-          Pen
-        </button>
-
-        <button id="eraser">
-          Eraser
-        </button>
-
+        <button id="pencil">Pen</button>
+        <!-- <button id="pencil"><span class="fa fa-paint-brush"></button> -->
+        <button id="eraser">Eraser</button>
+        <!-- <button id="eraser"><span class="fa fa-eraser"></button> -->
         <button id="fill">
           Fill Bucket
         </button>
-
-
-
         <button id="round">
           Round Tip
         </button>
@@ -52,12 +45,9 @@
         <button id="square">
           Square Tip
         </button>
-
-
         <label for="stroke">
           Colors
         </label>
-
         <input id="stroke" name='stroke' type="color">
         <br>
         <label for="lineWidth">
@@ -65,19 +55,12 @@
         </label>
         <input id="lineWidth" name="lineWidth" type="number" value="1">
         <br>
-
-        <button id="clear">
-          Clear
-        </button>
-
-        <button id="undo">
-          Undo
-        </button>
-        <button id="redo">
-          Redo
-        </button>
-
-
+        <button id="clear">Clear</button>
+        <!-- <button id="clear"><span class="fa fa-trash"></button> -->
+        <button id="undo">Undo</button>
+        <!-- <button id="undo"><span class="fa fa-undo"></button> -->
+        <button id="redo">Redo</button>
+        <!-- <button id="redo"><span class="fa fa-repeat"></button> -->
       </div>
     </section>
     <div class="center hideform">
@@ -95,7 +78,7 @@
             <input type="text">
             <br>
             <br>
-            <input type="button" onclick="window.location.href = 'timeline.html';" value="Submit!">
+            <input type="button" id="save" onclick="window.location.href = 'timeline.html';" value="Submit!">
         </form>
     </div>
     <br>
