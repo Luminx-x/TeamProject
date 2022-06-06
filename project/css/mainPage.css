@@ -25,9 +25,9 @@ canvas {
   border: 3px solid black;
   padding: 10px;
   width: 260px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
+  height: 381px;
+  /* display: flex;
+  flex-direction: column; */
   font-family: "Brush Script MT", cursive;
   font-size: 25px;
 }
@@ -66,34 +66,67 @@ canvas {
   width: 50px;
 }
 
-#clear {
-  width: 80px;
-  font-family: "Brush Script MT", cursive;
-  font-size: 20px;
-}
-
 #pencil {
   width: 80px;
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
+  border-radius: 50%;
 }
 
 #eraser {
   width: 80px;
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
+  border-radius: 50%;
+}
+
+#fill {
+  width: 100px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+#round {
+  width: 100px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+#butt {
+  width: 80px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+#square {
+  width: 100px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+#clear {
+  width: 80px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
+  border-radius: 50%;
 }
 
 #undo {
   width: 80px;
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
+  border-radius: 50%;
 }
 
 #redo {
   width: 80px;
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
+  border-radius: 50%;
 }
 
 .container#blur.active {
