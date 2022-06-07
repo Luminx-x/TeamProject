@@ -37,12 +37,11 @@ $(function() {
           }
     });
 
-    toolbar.addEventListener('click', e => {
-        if(e.target.id === 'fill') {
-
-          }
-    });
-
+    // toolbar.addEventListener('click', e => {
+    //         if(e.target.id === 'fill') {
+    //
+    //           }
+    //     });
 
     //Color Tool
     toolbar.addEventListener('change', e => {
