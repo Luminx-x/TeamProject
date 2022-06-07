@@ -1,14 +1,18 @@
 body {
-  background-color: #6C464F;
+  background-image: linear-gradient(to right, #de6161, #2657eb);
+  /* background-image: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b); */
+  /* background-image: linear-gradient(to right, #4568dc, #b06ab3); */
+  /* background-color: #6C464F; */
 }
 
 h1 {
   text-align: center;
-  border-style: solid;
-  padding: 15px;
-  background-color: #9FA4C4;
+  /* border-style: solid; */
+  /* padding: 15px;
+  background-color: #9FA4C4; */
   font-family: "Brush Script MT", cursive;
-  font-size: 60px;
+  font-size: 80px;
+  text-shadow: 3px 3px white;
 }
 
 canvas {
@@ -21,7 +25,8 @@ canvas {
 }
 
 #toolbar {
-  background-color: #9FA4C4;
+  background-color: #6d597a;
+  /* background-color: #9FA4C4; */
   border: 3px solid black;
   padding: 10px;
   width: 260px;
@@ -53,7 +58,8 @@ canvas {
   left: 93.3%;
   width: 100px;
   height: 40px;
-  background-color: #9FA4C4;
+  background-color: #6d597a;
+  /* background-color: #9FA4C4; */
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
 }

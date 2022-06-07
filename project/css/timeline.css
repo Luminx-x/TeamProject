@@ -1,14 +1,16 @@
 body {
-  background-color: #6C464F;
+  background-image: linear-gradient(to right, #de6161, #2657eb);
+  /* background-color: #6C464F; */
 }
 
 h1 {
   text-align: center;
-  border-style: solid;
+  /* border-style: solid;
   padding: 15px;
-  background-color: #9FA4C4;
+  background-color: #9FA4C4; */
   font-family: "Brush Script MT", cursive;
-  font-size: 60px;
+  font-size: 80px;
+  text-shadow: 3px 3px white;
 }
 
 #originalCanvas {
@@ -19,6 +21,8 @@ h1 {
   height: 430.33px;
   float: left;
   overflow: hidden;
+  font-family: "Brush Script MT", cursive;
+  font-size: 30px;
 }
 
 #originalCanvas img {
@@ -32,7 +36,10 @@ h1 {
   right: 0;
   width: 100px;
   height: 40px;
-  background-color: #9FA4C4;
+  /* background-color: #9FA4C4; */
+  background-color: #6d597a;
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
 }
 
 .grid {
