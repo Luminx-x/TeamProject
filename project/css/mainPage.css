@@ -25,8 +25,8 @@ canvas {
 }
 
 #toolbar {
-  background-color: #6d597a;
-  /* background-color: #9FA4C4; */
+  background: rgba(38, 87, 235, 0.15);
+  /* background-color: #6d597a; */
   border: 3px solid black;
   padding: 10px;
   width: 260px;
@@ -58,8 +58,8 @@ canvas {
   left: 93.3%;
   width: 100px;
   height: 40px;
-  background-color: #6d597a;
-  /* background-color: #9FA4C4; */
+  background: rgba(222, 97, 97, 0.3);
+  /* background-color: #6d597a; */
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
 }
@@ -80,7 +80,7 @@ canvas {
 }
 
 #eraser {
-  width: 80px;
+  width: 90px;
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
   border-radius: 50%;
@@ -93,7 +93,7 @@ canvas {
   border-radius: 50%;
 }
 
-#round {
+/* #round {
   width: 100px;
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
@@ -112,7 +112,7 @@ canvas {
   font-family: "Brush Script MT", cursive;
   font-size: 20px;
   border-radius: 50%;
-}
+} */
 
 #clear {
   width: 80px;

@@ -67,15 +67,15 @@ $(function() {
         }
 
         //pen cap shape (probably not needed)
-        if(e.target.id === 'butt') {
-            ctx.lineCap = 'butt';
-        }
-        if(e.target.id === 'square') {
-            ctx.lineCap = 'square';
-        }
-        if(e.target.id === 'round') {
-            ctx.lineCap = 'round';
-        }
+        // if(e.target.id === 'butt') {
+        //     ctx.lineCap = 'butt';
+        // }
+        // if(e.target.id === 'square') {
+        //     ctx.lineCap = 'square';
+        // }
+        // if(e.target.id === 'round') {
+        //     ctx.lineCap = 'round';
+        // }
     });
 
     //Save to stack
