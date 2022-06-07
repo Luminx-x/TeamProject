@@ -1,3 +1,6 @@
+// Authors: Zac Nakamura, Tracie Thornbury, Jorge Osorio, Darshaya Washington, Aidan Andreasen
+// Created 22 May 2022
+
 $(function() {
     var letsdraw = false;
 
@@ -7,29 +10,29 @@ $(function() {
     theCanvas.width = 1200;
     theCanvas.height = 646;
 
-    //For Redo function
+    // For Redo function
     var cStep = -1;
     var cPushArray = new Array();
 
-    //Needed for the eraser tool
+    // Needed for the eraser tool
     const context = theCanvas.getContext('2d')
-    //context.globalCompositeOperation = 'destination-out';
+    // context.globalCompositeOperation = 'destination-out';
 
-    //Setting initial values
+    // Setting initial values
     context.strokeStyle = stroke.value;
     lineWidth = lineWidth.value;
     ctx.lineCap = 'round';
 
     var canvasOffset = $('#drawing-board').offset();
 
-
-    //Eraser and pencil tools
+    // Eraser tool
     toolbar.addEventListener('click', e => {
         if(e.target.id === 'eraser') {
             context.globalCompositeOperation = 'destination-out';
         }
     });
 
+    // Pen tool
     toolbar.addEventListener('click', e => {
         if(e.target.id === 'pencil') {
               context.strokeStyle = stroke.value;
@@ -43,7 +46,7 @@ $(function() {
     //           }
     //     });
 
-    //Color Tool
+    // Color Tool
     toolbar.addEventListener('change', e => {
         if(e.target.id === 'stroke') {
             ctx.strokeStyle = e.target.value;
@@ -51,33 +54,33 @@ $(function() {
     });
 
 
-    //Line Width Tool
+    // Line Width Tool
     toolbar.addEventListener('change', e => {
         if(e.target.id === 'lineWidth') {
             lineWidth = e.target.value;
         }
     })
 
-    //Clear Tools
+    // Clear Tools
     toolbar.addEventListener('click', e => {
         if (e.target.id === 'clear') {
             ctx.clearRect(0, 0, theCanvas.width, theCanvas.height);
             cPush();
         }
 
-        //pen cap shape (probably not needed)
-        // if(e.target.id === 'butt') {
-        //     ctx.lineCap = 'butt';
-        // }
-        // if(e.target.id === 'square') {
-        //     ctx.lineCap = 'square';
-        // }
-        // if(e.target.id === 'round') {
-        //     ctx.lineCap = 'round';
-        // }
+    //pen cap shape (probably not needed)
+    // if(e.target.id === 'butt') {
+    //     ctx.lineCap = 'butt';
+    // }
+    // if(e.target.id === 'square') {
+    //     ctx.lineCap = 'square';
+    // }
+    // if(e.target.id === 'round') {
+    //     ctx.lineCap = 'round';
+    // }
     });
 
-    //Save to stack
+    // Save to stack
     function cPush() {
       cStep++;
       console.log(cStep);
@@ -86,7 +89,7 @@ $(function() {
     }
     cPush();
 
-    //Undo
+    // Undo
     toolbar.addEventListener('click', e => {
         if (e.target.id === 'undo') {
           if (cStep > 0) {
@@ -95,14 +98,14 @@ $(function() {
               var canvasPic = new Image();
               canvasPic.src = cPushArray[cStep];
 
-              //load last stack image
+              // load last stack image
               canvasPic.onload = function () { ctx.drawImage(canvasPic, 0, 0); }
               ctx.clearRect(0, 0, theCanvas.width, theCanvas.height);
           }
         }
     });
 
-    //Redo
+    // Redo
     toolbar.addEventListener('click', e => {
         if (e.target.id === 'redo') {
           if (cStep < cPushArray.length-1) {
@@ -110,14 +113,14 @@ $(function() {
               console.log(cStep);
               var canvasPic = new Image();
               canvasPic.src = cPushArray[cStep];
-              //load stack image + 1
+              // load stack image + 1
               canvasPic.onload = function () { ctx.drawImage(canvasPic, 0, 0); }
           }
         }
     });
 
 
-    //Drawing Function
+    // Drawing Function
     $('#drawing-board').mousemove(function(e) {
         if (letsdraw === true) {
             //Draw line
@@ -148,16 +151,19 @@ $(function() {
     });
 });
 
+// opens pop-up on button click
 $("#showPopUp").on("click", function () {
     $(".center").show();
     $(this).hide();
 })
 
+// closes pop-up on button click
 $("#closePopUp").on('click', function () {
     $(".center").hide();
     $("#showPopUp").show();
 })
 
+// blurs background when button is toggled
 function toggle() {
   var blur = document.getElementById('blur');
   blur.classList.toggle('active');
@@ -167,6 +173,7 @@ function toggle() {
 var theCanvas = document.getElementById('drawing-board');
 // var ctx = theCanvas.getContext('2d');
 
+// downloads user's drawing upon button click
 var download = document.getElementById('save');
 download.addEventListener('click', function (e) {
   var link = document.createElement('a');
